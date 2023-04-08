@@ -1,16 +1,32 @@
-import { Button } from 'bootstrap';
+
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBarComponents from './componentes/Layout/navbar/NavBarComponents';
+import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom"
+import Preguntas from './componentes/paginas/Preguntas';
+import Nosotros from './componentes/paginas/Nosotros.jsx';
+import Contacto from './componentes/paginas/Contacto.jsx';
+import Inicio from './componentes/paginas/Inicio.jsx';
+import ProductList from './componentes/paginas/ProductList';
 
 function App() {
-  return (
-    <div className="App">
-     <section className="container-md">
-      <h1>Proyecto Caprichosas</h1>
-      <button type="button" class="btn btn-primary">Primary</button>
-     </section>
-    </div>
+  return (    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NavBarComponents />} >
+            <Route index element={<Inicio />} />
+            <Route path="productos" element={<ProductList />} />
+            <Route path="preguntas-frecuentes" element={<Preguntas />} />
+            <Route path="nosotros" element={<Nosotros />} />
+            <Route path="contacto" element={<Contacto />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    
+
   );
 }
 
 export default App;
+
