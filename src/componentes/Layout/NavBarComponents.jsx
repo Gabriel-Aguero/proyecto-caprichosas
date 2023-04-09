@@ -1,8 +1,17 @@
 import Button from 'react-bootstrap/Button';
-import { Navbar, Nav, Form, Container } from 'react-bootstrap';
-import {Outlet, Link } from 'react-router-dom';
+import { Navbar, Nav, Form, Container, NavDropdown } from 'react-bootstrap';
+import { Outlet, Link } from 'react-router-dom';
 
 function NavBarComponents() {
+
+  const apretar = () =>{
+    alert("Hola aprete el boton");
+  }
+
+  const handleChange = (e) =>{
+    console.log(e.target.value);
+  }
+
   return (
     <>
       <Navbar className="container" bg="light" variant="light" expand="lg">
@@ -15,7 +24,12 @@ function NavBarComponents() {
               style={{ maxHeight: '150px' }}
             >
               <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
-              <Nav.Link as={Link} to="/productos" >Productos</Nav.Link>
+              <NavDropdown title="Categoria" to={"/"} id="navbarScrollingDropdown">             
+                <NavDropdown.Item as={Link} to={"/categoria/Arnés"}>Arnés</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={"/categoria/Conjunto"}>Conjuntos</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={"/categoria/Liga"}>Liga</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={"/categoria/Bustier"}>Bustier</NavDropdown.Item>
+              </NavDropdown>
               <Nav.Link as={Link} to="/preguntas-frecuentes" >Preguntas Frecuentes</Nav.Link>
               <Nav.Link as={Link} to="/nosotros" >Nosotros</Nav.Link>
             </Nav>
@@ -25,8 +39,9 @@ function NavBarComponents() {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                onChange={handleChange}
               />
-              <Button variant="outline-dark">Search</Button>
+              <Button onClick={apretar} variant="outline-dark">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
