@@ -44,7 +44,6 @@ const Inicio = () => {
         </div>
         <ComoComprar />
         <Visitanos />
-        
       </div>
   )
 }

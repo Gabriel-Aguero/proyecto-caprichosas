@@ -2,17 +2,7 @@ import React from "react";
 
 
 const Visitanos = () => {
-    const ACCESS_TOKEN = 'TU_TOKEN_DE_ACCESO';
-    const ACCOUNT_NAME = 'caprichosas.salta';
-
-    fetch(`https://graph.instagram.com/${ACCOUNT_NAME}/media?fields=id,caption,media_url,thumbnail_url&access_token=${ACCESS_TOKEN}`)
-    .then(response => response.json())
-    .then(data => {
-        const thumbnailUrl = data.data[0].thumbnail_url;
-        const photoElement = document.getElementById('photo');
-        photoElement.innerHTML = `<img src="${thumbnailUrl}">`;
-    })
-    .catch(error => console.error(error));
+    
     return (
         <div className="container">
             <div className="row text-center">
