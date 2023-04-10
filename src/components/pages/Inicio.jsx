@@ -1,5 +1,5 @@
 import { Row, Col, Card, Button } from 'react-bootstrap';
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/authContext";
 
 const Inicio = () => {
 
