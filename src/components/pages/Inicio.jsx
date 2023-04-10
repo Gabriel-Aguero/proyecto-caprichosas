@@ -1,50 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import { Card, Row, Col } from 'react-bootstrap';
-import { db } from "../../firebaseConfig";
-import { collection, getDocs } from 'firebase/firestore';
-import Carousel from '../Carousel';
-import ComoComprar from '../ComoComprar';
-import Visitanos from '../visitanos';
+import { Row, Col, Card, Button } from 'react-bootstrap';
+import { useAuth } from "../../context/AuthContext";
 
 const Inicio = () => {
 
-  const [listproduct, setListProduct] = useState([]);
-
-  const getProductos = async () => {
-    const productos = await getDocs(collection(db, "productos"));
-    let docs = [];
-    productos.forEach(documento => {
-      docs.push({ ...documento.data(), id: documento.id })
-      console.log(docs);
-    });
-    setListProduct(docs);
-  }
-
-  useEffect(() => {
-    getProductos();
-  }, [])
-
-  return (
+  const { listproduct } = useAuth();
+  
     
-      <div>
-        <Carousel/>
-        <div className="container">
-        <Row style={{marginTop:'5rem' }}>
+  const verProducto = (id) =>{
+    console.log(id);
+  }
+  
+  return (
+    <>
+      <div className="container">
+        <Row xs={1} md={2} lg={4} className="g-4" style={{ marginTop: '1rem' }}>
           {listproduct.map(producto => (
-            <Col style={{marginTop:'1rem' }}>
-              <Card className="container" style={{ width: '18rem' }}>
-                <Card.Body key={producto.id}>
-                  <Card.Img style={{ width: '250px', height: '300px'}} variant="top" src={producto.imagen} />
-                  <Card.Title>{producto.Categoria}</Card.Title>
+            <Col key={producto.id}>
+              <Card className="container text-center">
+                <Card.Img style={{ height: '250px', objectFit: 'cover' }} variant="top" src={producto.imagen} />
+                <Card.Body>
+                  <Card.Title style={{ color: 'gray', marginTop: '2px' }}>{producto.Categoria + " " + producto.Nombre}</Card.Title>
+                  <Card.Text style={{ color: 'black', fontSize:'18px', marginTop: '2px' }}>{"$ " + producto.Precio}</Card.Text>
+                  <Button onClick={()=>{verProducto(producto.id)}} style={{ textAlign: 'center', marginTop: '5px' }} variant="outline-secondary">Ver Producto</Button>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
-        </div>
-        <ComoComprar />
-        <Visitanos />
-      </div>
+      </div>      
+    </>
   )
 }
 
