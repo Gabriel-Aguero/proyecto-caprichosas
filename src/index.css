@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
+h1, h2, h3, p {
+    font-family: 'Didact Gothic', sans-serif;
+}
+.font {
+    font-family: 'Anton', sans-serif;
+}
+
 .banner {
     width: 100%;
 }
@@ -19,10 +28,12 @@
     color: black;
 }
 
-.colorFondo {
-    background-color: #DBDADA;
+.colorPrincipal {
+    background-color: #F4B8C2;
 }
-
+.colorSecundario {
+    background-color: #EF94A4;
+}
 .cursor {
     cursor: pointer;
 }
@@ -40,3 +51,8 @@
 .link:hover {
     color: black;
 }
+
+.navBackground:active {
+    background-color: #EF94A4 !important; /* cambia el color de fondo del enlace al hacer clic */
+}
+

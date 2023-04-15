@@ -1,33 +1,31 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarComponents from './components/layout/NavBarComponents';
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom"
-import Preguntas from './components/pages/Preguntas';
-import Nosotros from './components/pages/Nosotros.jsx';
-import Contacto from './components/pages/Contacto.jsx';
-import ProductList from './components/pages/ProductList';
 import { AuthProvider } from './context/authContext.jsx';
-import Main from './components/layout/Main';
-import Carousel from './components/layout/Carousel';
-import ComoComprar from './components/layout/ComoComprar';
+import NavBarComponents from './components/layout/NavBarComponents';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Nosotros from './components/pages/Nosotros.jsx';
+import PreguntasFrecuentes from './components/pages/PreguntasFrecuentes';
 import Footer from './components/layout/Footer';
+import ScrollTo from './components/ScrollTo';
+
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <NavBarComponents />      
-        <Carousel />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="categoria/:categoriaName" element={ <ProductList /> }/>          
-          <Route path="preguntas-frecuentes" element={<Preguntas />} />
-          <Route path="nosotros" element={<Nosotros />} />
-          <Route path="contacto" element={<Contacto />} />
-          <Route path="*" element={<Navigate replace to="/" />} />
+          <Route path="/" element={<ItemListContainer/>} />
+          <Route path={"/categoria/:id"} element={<ItemListContainer />}/>   
+          <Route path={"/item/:id"} element={<ItemDetailContainer/>}/>        
+          <Route path={"/preguntasfrecuentes"} element={<PreguntasFrecuentes/>} />
+          <Route path={"/nosotros"} element={<Nosotros />} />
+          <Route path={"*" }element={<Navigate replace to="/" />} />
         </Routes>
-        <ComoComprar />
         <Footer />
+        <ScrollTo/>
       </BrowserRouter>
     </AuthProvider>
   );
