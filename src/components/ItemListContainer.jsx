@@ -19,7 +19,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection (db, "productos")
-        const q = (id ? query(itemsCollection, where("Categoria","==",id)) : itemsCollection)
+        const q = (id ? query(itemsCollection, where("categoria","==",id)) : itemsCollection)
         getDocs(q).then((snapShot) => {
             const itemsSorted = snapShot.docs.map((doc) => ({id:doc.id, ...doc.data()}));
         itemsRef.current = itemsSorted;

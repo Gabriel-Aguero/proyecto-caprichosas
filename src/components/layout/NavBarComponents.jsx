@@ -13,7 +13,7 @@ const NavBarComponents = () => {
 	}
 
 	return (
-		<div>  
+		<div className='container'>  
 			<Navbar variant="light" expand="lg">
 				<Container fluid>
 					<Navbar.Brand as={Link} to="/"><img className="img-fluid" src={"/images/logoPrincipal.svg"} alt="" /></Navbar.Brand>
