@@ -7,13 +7,13 @@ const CarouselComponents = () => {
             <Row>
                 <Carousel fade>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={"/images/bannerPrimero.jpg"} alt="Banner"/>
+                        <img className="d-block w-100" src={"/images/bannerPrimero.png"} alt="Banner"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={"/images/bannerSegundo.jpg"} alt="Banner"/>
+                        <img className="d-block w-100" src={"/images/bannerSegundo.png"} alt="Banner"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={"/images/bannerTercero.jpg"} alt="Banner"/>
+                        <img className="d-block w-100" src={"/images/bannerTercero.png"} alt="Banner"/>
                     </Carousel.Item>
                 </Carousel>
             </Row>

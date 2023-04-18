@@ -9,12 +9,11 @@ const Item = ({ item, showPrice }) => {
                 <Card.Img variant="top" src={item.imagen} style={{ height: '200px', objectFit: 'cover' }} />
                 <Card.Body className='text-center font'>
                     <Card.Title style={{ marginTop: '2px' }}>{item.nombre}</Card.Title>
-                    {showPrice && (
+                   
                         <Card.Text>
-                            {"$ " + item.Precio + " ARS"}
+                            {"$ " + item.precio + " ARS"}
                         </Card.Text>
-                    )}
-
+                   
                 </Card.Body>
             </Card>
         </Link>

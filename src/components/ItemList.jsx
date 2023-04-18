@@ -9,11 +9,11 @@ const ItemList = ({items, showPrice, setItems, itemsRef}) => {
     const handleSortChange = (value) => {
         const itemsSorted = [...itemsRef.current];
         if (value === "Menor a mayor") {
-            itemsSorted.sort((a, b) => a.Precio - b.Precio);
+            itemsSorted.sort((a, b) => a.precio - b.precio);
         } else if (value === "Mayor a menor") {
-            itemsSorted.sort((a, b) => b.Precio - a.Precio);
+            itemsSorted.sort((a, b) => b.precio - a.precio);
         }else {
-            itemsSorted.sort((a, b) => a.Nombre.localeCompare(b.Nombre));
+            itemsSorted.sort((a, b) => a.nombre.localeCompare(b.nombre));
         }
         setItems(itemsSorted);
         setSelectedOption(value)
