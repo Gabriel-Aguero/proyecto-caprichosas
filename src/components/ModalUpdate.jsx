@@ -4,7 +4,7 @@ import { getFirestore, doc, updateDoc } from "firebase/firestore";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const ModalUpdate = ({ newitems, handleClose }) => {
+const ModalUpdate = ({ newitems, handleClose, updateTable }) => {
 
     const [items, setItems] = useState();
 
@@ -36,10 +36,15 @@ const ModalUpdate = ({ newitems, handleClose }) => {
 
     }
 
+    const closeOption = () =>{ 
+        handleClose();
+        updateTable();
+    }
+
     return (
 
         <Modal show={true} onHide={handleClose}>
-            <Modal.Header closeButton>
+            <Modal.Header>
                 <Modal.Title>Formulario de Actualización</Modal.Title>
             </Modal.Header>
 
@@ -48,7 +53,7 @@ const ModalUpdate = ({ newitems, handleClose }) => {
                     <FormGroup className="my-3" controlId="formBasicEmail"
                         name="producto">
                         <Form.Label>Productos</Form.Label>                        
-                        <Form.Control type="text" placeholder={newitems.nombre}
+                        <Form.Control type="text" disabled placeholder={newitems.nombre}
                             name="nombre"                            
                             />
                     </FormGroup >
@@ -63,7 +68,7 @@ const ModalUpdate = ({ newitems, handleClose }) => {
 
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="secondary" onClick={()=>{ closeOption() }}>
                     Cerrar
                 </Button>
                 <Button variant="primary" onClick={() => { onUpdate(newitems.id) }}>

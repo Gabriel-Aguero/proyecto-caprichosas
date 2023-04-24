@@ -8,12 +8,15 @@ const UpdatePrice = () => {
   const [items, setItems] = useState([]);
   const [show, setShow] = useState(false);
   const [newitems, setNewItems] = useState([]);
+  const [newupdate, setNewUpdate] = useState([false]);
 
   const handleShow = (item) => {
     setNewItems(item);
-    // console.log(item)
     setShow(true);
+    setNewUpdate(!newupdate);
   } 
+
+  const updateTable = () => setNewUpdate(true);
   const handleClose = () => setShow(false);
         
   const getDatos = async () => {
@@ -29,7 +32,7 @@ const UpdatePrice = () => {
 
   useEffect(() => {
     getDatos();
-  }, [])
+  }, [newupdate])
 
   return (
     <div className="d-flex justify-content-center align-items-center my-5">
@@ -56,7 +59,7 @@ const UpdatePrice = () => {
           </tbody>
         ))}
       </Table>
-      {show && <ModalUpdate newitems={newitems} handleClose={handleClose}/> }
+      {show && <ModalUpdate newitems={newitems} updateTable={updateTable} handleClose={handleClose}/> }
     </div>
 
   )
