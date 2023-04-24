@@ -9,7 +9,8 @@ import Nosotros from './components/pages/Nosotros.jsx';
 import PreguntasFrecuentes from './components/pages/PreguntasFrecuentes';
 import Footer from './components/layout/Footer';
 import ScrollTo from './components/ScrollTo';
-
+import Ingresar from './components/pages/Ingresar';
+import UpdatePrice from './components/UpdatePrice';
 
 function App() {
   return (
@@ -22,9 +23,11 @@ function App() {
           <Route path={"/item/:id"} element={<ItemDetailContainer/>}/>        
           <Route path={"/preguntasfrecuentes"} element={<PreguntasFrecuentes/>} />
           <Route path={"/nosotros"} element={<Nosotros />} />
+          <Route path={"/ingresar"} element={<Ingresar />} />
+          <Route path={"/updateprice"} element={<UpdatePrice />} />
           <Route path={"*" }element={<Navigate replace to="/" />} />
         </Routes>
-        <Footer />
+        <Footer />        
         <ScrollTo/>
       </BrowserRouter>
     </AuthProvider>

@@ -3,7 +3,7 @@ import { Carousel, Container, Row } from "react-bootstrap";
 
 const CarouselComponents = () => {
     return (
-        <Container className="mt-5">
+        <Container className="mt-3">
             <Row>
                 <Carousel fade>
                     <Carousel.Item>

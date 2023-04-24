@@ -1,7 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { db } from "../firebaseConfig";
-import { getDocs, collection } from "firebase/firestore"
-
+import { createContext, useContext } from "react";
+import { auth } from "../firebaseConfig";
+import {
+    // createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    // onAuthStateChanged,
+    // signOut,
+    // sendPasswordResetEmail
+  } from "firebase/auth"
 
 export const authContext = createContext();
 
@@ -10,28 +15,28 @@ export const useAuth = () => {
   return context;
 }
 
+// //   funcion de firebase para registrarme   
+// const signup = (email, password) => 
+// createUserWithEmailAndPassword(auth, email, password);
+
+
+// funcion de firebase para logearme 
+const login = (email, password) =>
+signInWithEmailAndPassword(auth, email, password);
+
+// // cerrar sesion 
+// const logout = () => signOut(auth);
+
+// // Resetear password  
+// const resetPassword = (email) => {
+// sendPasswordResetEmail(auth, email);
+// }
+
 export function AuthProvider({ children }) {
-
-  const [listproduct, setListProduct] = useState([]); 
-  
-   
-  // Recuperar los productos de la base de datos 
-  const getDatos = async () => {
-    const datos = await getDocs(collection(db, "productos"));
-    let docs = [];
-    datos.forEach(documento => {
-      docs.push({ ...documento.data(), id: documento.id })
-    });
-    setListProduct(docs);
-  }
-
-  useEffect(() => {
-    getDatos();
-  }, [])
  
   
   return (
-    <authContext.Provider value={{ listproduct }}>
+    <authContext.Provider value={{ login }}>
       {children}
     </authContext.Provider>
 

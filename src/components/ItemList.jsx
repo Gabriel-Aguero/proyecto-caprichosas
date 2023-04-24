@@ -29,7 +29,7 @@ const ItemList = ({items, showPrice, setItems, itemsRef}) => {
                 </DropdownButton>
                 {items.map(item =>
                     <Col xs={"6"} md={"3"} className="my-3" key={item.id}>
-                        <Item item={item} showPrice={showPrice}/> 
+                        <Item item={item}/>
                     </Col>
                 )}
             </Row>
