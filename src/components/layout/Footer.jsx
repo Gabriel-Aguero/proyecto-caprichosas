@@ -24,13 +24,12 @@ const Footer = () => {
                                 <a href="https://www.facebook.com/Caprichosas.salta/" target={"blank"}><img className="icons" src={"/images/facebook.svg"} alt="" />Caprichosas.salta</a>
                             </p>                    
                             </Col>
-                            <Col xs={"12"} md={"5"} xl={"3"} className="text-center text-md-start">
+                            <Col xs={"12"} md={"5"} xl={"3"} className="text-center text-md-start mb-5">
                                 <h2>Ayuda</h2>
                                 <Link className="link" to="/preguntasfrecuentes">
                                     <p>Preguntas Frecuentes</p>
+                                    <p>Politicas de cambios y devoluciones</p>
                                 </Link>
-                                <p>Envios y Pagos</p>
-                                <p>Politicas de cambios y devoluciones</p>
                             </Col>
                         </Row>
                     </Col>

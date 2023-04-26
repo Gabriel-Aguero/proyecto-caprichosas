@@ -3,12 +3,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
 }
 h1, h2, h3, p {
     font-family: 'Didact Gothic', sans-serif;
 }
 .font {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .banner {
@@ -56,3 +58,110 @@ h1, h2, h3, p {
     background-color: #EF94A4 !important; /* cambia el color de fondo del enlace al hacer clic */
 }
 
+.imgCarousel {
+    object-fit: cover;
+    object-position: center;
+}
+
+.buttonFiltro {
+    background-color: #EF94A4;
+}
+.cuadradoUno, .cuadradoDos, .cuadradoTres, .cuadradoCuatro, .cuadradoCinco {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid black;
+}
+.cuadradoDos {
+    background-color: black;
+}
+.cuadradoTres {
+
+    background-color: white;
+}
+.cuadradoCuatro {
+    background-color: green;
+}
+.cuadradoCinco {
+    background-color: blue;
+}
+.cuadradoUno {
+    background-color: red;
+}
+
+.posicionMediosPago {
+    display: inline-block !important;
+    
+}
+
+.posicionMediosPago img {
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.list-group-item {
+    border: none !important;
+}
+
+#bntDropdown {
+    color: black !important;
+    background-color: #EF94A4 !important;
+    border-color: #EF94A4 !important;
+}
+
+.btnItem:hover {
+    color: black !important;
+    background-color: transparent !important;
+}
+
+.cardList {
+    box-shadow: 0 0 5px #EF94A4, 0 0 7px #EF94A4, 0 0 13px #EF94A4;
+}
+
+.tablaBusqueda {
+    position: absolute;
+    z-index: 3;
+}
+
+.buscador {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.buscador:hover {
+    color: #000;
+}
+
+.fondoBuscador {
+    background-color: rgba(255, 255, 255, 0.87);
+    width: 100% !important;
+}
+
+.form-control {
+    display: inline-block !important;
+    box-shadow:none !important;
+    border: none !important;
+    border-bottom: 1px solid black !important;
+    border-radius: 0px !important;
+}
+
+
+.buscador-input {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+  
+.buscador-input .lupita {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+ 

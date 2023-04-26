@@ -1,25 +1,21 @@
-import Button from 'react-bootstrap/Button';
-import { Navbar, Nav, Form, Container, NavDropdown } from 'react-bootstrap';
-import { Outlet, Link } from 'react-router-dom';
+
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Buscador from '../Buscador';
 
 const NavBarComponents = () => {
 
-	const apretar = () =>{
-		alert("Hola aprete el boton");
-	}
-
-	const handleChange = (e) =>{
-		console.log(e.target.value);
-	}
+	
+	
 
 	return (
-		<div>  
-			<Navbar variant="light" expand="lg">
-				<Container fluid>
+		 
+			<Navbar variant="light" expand="lg" className="mx-md-4 mt-3">
+				<Container>
 					<Navbar.Brand as={Link} to="/"><img className="img-fluid" src={"/images/logoPrincipal.svg"} alt="" /></Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
-						<Nav className="me-auto my-2 my-lg-0">
+						<Nav className="d-flex justify-content-center w-100 my-3 my-lg-0">
 							<Nav.Link as={Link} to="/" className='font'>Inicio</Nav.Link>
 							<NavDropdown title="Categoria" className='font' id="collasible-nav-dropdown">             
 								<NavDropdown.Item as={Link} to={"/categoria/Arnés"} className='font navBackground'>Arnés</NavDropdown.Item>
@@ -30,25 +26,11 @@ const NavBarComponents = () => {
 							<Nav.Link as={Link} to="/preguntasfrecuentes" className='font'>Preguntas Frecuentes</Nav.Link>
 							<Nav.Link as={Link} to="/nosotros" className='font'>Nosotros</Nav.Link>
 						</Nav>
-						<Form className="d-flex">
-						<Form.Control
-							type="search"
-							placeholder="Buscar"
-							className="me-2"
-							aria-label="Search"
-							onChange={handleChange}
-						/>
-						<Button onClick={apretar} variant="outline-dark">Buscar</Button>
-						</Form>
+						<Buscador/>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-			<section>
-				<Outlet>
-
-				</Outlet>
-			</section>
-		</div>
+		
 	);
 }
 

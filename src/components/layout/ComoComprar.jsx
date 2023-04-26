@@ -8,19 +8,19 @@ const ComoComprar = () => {
                 <Row className="text-center py-5">
                     <Col xs={"6"} md={"3"}>
                         <img src="/images/compraUno.svg" alt="" />
-                        <p>Escoge el producto que más te guste.</p>
+                        <p className="mt-3">Escoge el producto que más te guste.</p>
                     </Col>
                     <Col xs={"6"} md={"3"}>
                         <img src="/images/compraDos.svg" alt="" />
-                        <p>Selecciona “continuar compra” para contactarnos y darte una atención personalizada.</p>
+                        <p className="mt-3">Selecciona “continuar compra” para contactarnos y darte una atención personalizada.</p>
                     </Col>
                     <Col xs={"6"} md={"3"}>
                         <img src="/images/compraTres.svg" alt="" />
-                        <p>Nos preocupamos que toda la experiencia de compra se acomode a nuestros clientes.</p>
+                        <p className="mt-3">Nos preocupamos que toda la experiencia de compra se acomode a nuestros clientes.</p>
                     </Col>
                     <Col xs={"6"} md={"3"}>
                         <img src="/images/compraCuatro.svg" alt="" />
-                        <p>Vamos y te entregamos tu producto en tus manos.</p>
+                        <p className="mt-3">Vamos y te entregamos tu producto en tus manos.</p>
                     </Col>
                 </Row>
             </Container>

@@ -5,15 +5,15 @@ const CarouselComponents = () => {
     return (
         <Container className="mt-5">
             <Row>
-                <Carousel fade>
+                <Carousel fade variant="dark" className="p-0">
                     <Carousel.Item>
-                        <img className="d-block w-100" src={"/images/bannerPrimero.jpg"} alt="Banner"/>
+                        <img className="w-100 imgCarousel" src={"/images/bannerPrimero.jpg"} alt="Banner"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={"/images/bannerSegundo.jpg"} alt="Banner"/>
+                        <img className="w-100 imgCarousel" src={"/images/bannerSegundo.jpg"} alt="Banner"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src={"/images/bannerTercero.jpg"} alt="Banner"/>
+                        <img className="w-100 imgCarousel" src={"/images/bannerTercero.jpg"} alt="Banner"/>
                     </Carousel.Item>
                 </Carousel>
             </Row>
