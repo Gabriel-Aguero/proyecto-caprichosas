@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Table } from 'react-bootstrap'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import ModalUpdate from './ModalUpdate';
+import { BiEdit } from "react-icons/bi";
 
 const UpdatePrice = () => {
 	const [items, setItems] = useState([]);
@@ -51,9 +52,8 @@ const UpdatePrice = () => {
 							<td>{item.categoria}</td>
 							<td>{item.nombre}</td>
 							<td>{item.precio}</td>
-							<td>
-								<img src="/images/edit.svg" style={{ width: "100%", height: "20px", cursor: "pointer" }} alt="Editar"
-								onClick={() => handleShow(item)} />
+							<td>							
+							<BiEdit onClick={() => handleShow(item)} style={{ width: "100%", height: "20px", cursor: "pointer" }}/>								 								 
 							</td>
 						</tr>
 					</tbody>
