@@ -4,8 +4,6 @@ import { getFirestore, collection, getDocs} from "firebase/firestore";
 import { Container, Row } from "react-bootstrap";
 import ItemList from "./ItemList";
 
-
-
 const OtrosProductos = () => {
     const [items, setItems] = useState([]);
     const {id} = useParams();
@@ -37,14 +35,9 @@ const OtrosProductos = () => {
 
     return (
         <Container className="mt-5">
-            
             <Row>
-                
                 <h1 className="my-5">Otros productos</h1>
-                
                 <ItemList items={items}/>
-                
-                
             </Row>
         </Container>
     )

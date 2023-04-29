@@ -1,27 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
 
+/** CSS Valores por defecto */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
 }
-h1, h2, h3, p {
-    font-family: 'Didact Gothic', sans-serif;
-}
-.font {
+
+/** Fuentes para las letras */
+h1, h2, h3, p, 
+.fuente {
     font-family: 'Didact Gothic', sans-serif;
 }
 
-.banner {
+/** Colores que se usaran en la pagina */
+.colorPrincipal {
+    background-color: #F4B8C2;
+}
+.colorSecundario {
+    background-color: #EF94A4;
+}
+
+/** Clase que permite transformar un objeto en un pointer */
+.cursor {
+    cursor: pointer;
+}
+
+/** Seccion NavBar */
+/* cambia el color de fondo del enlace al hacer clic */
+.navBackground:active {
+    background-color: #EF94A4 !important; 
+}
+/* modificaciones en la barra de busqueda */
+.form-control {
+    display: inline-block !important;
+    box-shadow:none !important;
+    border: none !important;
+    border-bottom: 1px solid black !important;
+    border-radius: 0px !important;
+}
+#barraBuscar .buscador-input {
+    position: relative;
     width: 100%;
+    display: inline-block;
+}
+#barraBuscar .lupaBuscar {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+#barraBuscar .tablaBusqueda {
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.87);
+    width: 100% !important;
+}
+.resultadosBusqueda {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.resultadosBusqueda:hover {
+    color: #000;
 }
 
-.icons {
-    width: 30px;
-    padding-right: 3px;
+/** Seccion carousel Inicio */
+.imgCarousel {
+    object-fit: cover;
+    object-position: center;
 }
 
+/** Seccion Footer */
+/* clase que modifica enlaces de contacto y ayuda */
 .redesSociales a {
     color: black;
     text-decoration: none;
@@ -29,43 +81,20 @@ h1, h2, h3, p {
 .redesSociales a:hover {
     color: black;
 }
-
-.colorPrincipal {
-    background-color: #F4B8C2;
-}
-.colorSecundario {
-    background-color: #EF94A4;
-}
-.cursor {
-    cursor: pointer;
-}
-
-.elemento {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: black;
+.iconosRedesSociales {
+    width: 30px;
+    padding-right: 3px;
 }
 .link {
     color: black;
     text-decoration: none;
 }
-
 .link:hover {
     color: black;
 }
 
-.navBackground:active {
-    background-color: #EF94A4 !important; /* cambia el color de fondo del enlace al hacer clic */
-}
-
-.imgCarousel {
-    object-fit: cover;
-    object-position: center;
-}
-
-.buttonFiltro {
-    background-color: #EF94A4;
-}
+/** Seccion ItemDetail */
+/* estilos de los disntitos cuadrados que representan un color */
 .cuadradoUno, .cuadradoDos, .cuadradoTres, .cuadradoCuatro, .cuadradoCinco {
     display: inline-block;
     width: 20px;
@@ -90,18 +119,17 @@ h1, h2, h3, p {
     background-color: red;
 }
 
+/** Seccion Preguntas Frecuentes */
+/* estilos en los iconos que representan a los medios de pago */
 .posicionMediosPago {
     display: inline-block !important;
-    
 }
-
 .posicionMediosPago img {
     margin-right: 10px;
     border: 1px solid black;
     border-radius: 10px;
     margin-top: 10px;
 }
-
 .list-group-item {
     border: none !important;
 }
@@ -111,57 +139,7 @@ h1, h2, h3, p {
     background-color: #EF94A4 !important;
     border-color: #EF94A4 !important;
 }
-
 .btnItem:hover {
     color: black !important;
     background-color: transparent !important;
 }
-
-.cardList {
-    box-shadow: 0 0 5px #EF94A4, 0 0 7px #EF94A4, 0 0 13px #EF94A4;
-}
-
-.tablaBusqueda {
-    position: absolute;
-    z-index: 3;
-}
-
-.buscador {
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.buscador:hover {
-    color: #000;
-}
-
-.fondoBuscador {
-    background-color: rgba(255, 255, 255, 0.87);
-    width: 100% !important;
-}
-
-.form-control {
-    display: inline-block !important;
-    box-shadow:none !important;
-    border: none !important;
-    border-bottom: 1px solid black !important;
-    border-radius: 0px !important;
-}
-
-
-.buscador-input {
-    position: relative;
-    width: 100%;
-    display: inline-block;
-}
-  
-.buscador-input .lupita {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-  }
-
- 

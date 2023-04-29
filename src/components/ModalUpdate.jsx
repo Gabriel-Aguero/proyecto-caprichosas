@@ -48,7 +48,7 @@ const ModalUpdate = ({ newitems, handleClose, updateTable }) => {
                 <Form>
                     <FormGroup className="my-3" controlId="formBasicEmail" name="producto">
                         <Form.Label>Productos</Form.Label>                        
-                        <Form.Control type="text" disabled placeholder={newitems.nombre}name="nombre" />
+                        <Form.Control type="text" disabled placeholder={newitems.nombre} name="nombre" />
                     </FormGroup>
 
                     <FormGroup className="mb-3" controlId="exampleForm.ControlInput2">

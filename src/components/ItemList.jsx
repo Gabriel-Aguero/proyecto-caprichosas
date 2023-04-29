@@ -18,12 +18,9 @@ const ItemList = ({items, setItems, itemsRef, categoryName, categoryId}) => {
         setItems(itemsSorted);
         setSelectedOption(value)
     };
-    
-   
 
     return(
         <Container className="my-5">
-            
             <Row>
                 {categoryId && (
                     <>

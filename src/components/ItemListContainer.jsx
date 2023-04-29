@@ -36,11 +36,11 @@ const ItemListContainer = () => {
             {loading && <SpinnerComponents />}
             {!loading && (
                 <div>
-            {!id && <CarouselComponents />}
-            <ItemList  items={items} setItems={setItems} itemsRef={itemsRef} categoryName={categoryName} categoryId={id}/>
-            {!id && <ComoComprar/>}
-            {!id && <Visitanos/>}
-            </div>
+                    {!id && <CarouselComponents />}
+                    <ItemList  items={items} setItems={setItems} itemsRef={itemsRef} categoryName={categoryName} categoryId={id}/>
+                    {!id && <ComoComprar/>}
+                    {!id && <Visitanos/>}
+                </div>
             )}
         </div>
     )

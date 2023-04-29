@@ -24,7 +24,6 @@ const ItemDetailContainer = () => {
     },[id])
 
     return (
-
         <div>
             {loading ? <SpinnerComponents/> : <ItemDetail item={item} />}
         </div>
