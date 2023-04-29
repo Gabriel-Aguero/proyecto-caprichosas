@@ -5,7 +5,7 @@ import OtrosProductos from "./OtrosProductos";
 
 const ItemDetail = ({item}) => {
 
-    const phoneNumber = '3412295482';
+    const phoneNumber = '3876018879';
     const message = `Hola Caprichosas, estoy muy interesa en el producto ${item.nombre}. Me gustaria informacion sobre el mismo.`
     const image = item.imagen;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}%0A${encodeURIComponent(image)}`;
