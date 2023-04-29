@@ -19,12 +19,18 @@ const OtrosProductos = () => {
             ...doc.data(),
             }));
             return productos;
-        };
+    };
+    const scrollTop = () => {
+        window.scrollTo({
+            top: 0,
+        });
+    }    
         
     useEffect(() => {
         getProductos().then((productos) => {
         const productosAleatorios = productos.sort(() => Math.random() - 0.5).slice(0, 4);
         setItems(productosAleatorios);
+        scrollTop();
         });
     }, [id]);
         
