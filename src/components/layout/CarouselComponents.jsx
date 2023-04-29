@@ -3,7 +3,7 @@ import { Carousel, Container, Row } from "react-bootstrap";
 
 const CarouselComponents = () => {
     return (
-        <Container fluid className="mt-5">
+        <Container fluid className="mt-5" id="carouselDesplazamientoInicio">
             <Row>
                 <Carousel fade variant="dark" className="p-0">
                     <Carousel.Item>

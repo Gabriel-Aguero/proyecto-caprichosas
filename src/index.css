@@ -126,7 +126,13 @@ h1, h2, h3, p,
 #carouselDesplazamiento .carousel-control-prev-icon {
     display: none !important;
 }
-
+#carouselDesplazamientoInicio .carousel-control-next-icon,
+#carouselDesplazamientoInicio .carousel-control-prev-icon {
+    display: none !important;
+}
+#carouselDesplazamientoInicio .carousel-indicators {
+    display: none !important;
+}
 /** Seccion Preguntas Frecuentes */
 /* estilos en los iconos que representan a los medios de pago */
 .posicionMediosPago {
