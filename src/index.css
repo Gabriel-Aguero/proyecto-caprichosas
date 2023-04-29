@@ -118,6 +118,14 @@ h1, h2, h3, p,
 .cuadradoUno {
     background-color: red;
 }
+/* se descartan las flechas de desplazamiento y se colocan en una mejor posicion los iconos de desplazamiento debajo de la imagen*/
+#carouselDesplazamiento .carousel-indicators {
+    top: 510px !important;
+}
+#carouselDesplazamiento .carousel-control-next-icon, 
+#carouselDesplazamiento .carousel-control-prev-icon {
+    display: none !important;
+}
 
 /** Seccion Preguntas Frecuentes */
 /* estilos en los iconos que representan a los medios de pago */

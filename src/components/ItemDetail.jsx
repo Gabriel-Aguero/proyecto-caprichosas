@@ -18,7 +18,7 @@ const ItemDetail = ({item}) => {
         <Container className="my-5 ">
             <Row>
                 <Col xs={"12"} md={"5"}>
-                    <Carousel fade variant="dark">
+                    <Carousel fade variant="dark" id="carouselDesplazamiento">
                         <Carousel.Item>
                             <div className="d-flex justify-content-center">
                                 <img className="img-fluid" style={{width: '500px', height: '500px', objectFit: 'cover' }} src={item.imagen1} alt="Imagen Producto"/>
