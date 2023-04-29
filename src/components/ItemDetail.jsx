@@ -36,7 +36,7 @@ const ItemDetail = ({item}) => {
                         </Carousel.Item>
                     </Carousel>
                 </Col>
-                <Col md={"4"} className="mt-5 mt-md-0 ms-md-5 mx-3">
+                <Col md={"4"} className="mt-5 mt-md-0 ms-md-5 ps-4">
                     <h2>{item.categoria + " " + item.nombre }</h2>
                     <h3 className="my-3">{"$ " + item.precio + " ARS"}</h3>
                     <Button onClick={handleWhatsAppButtonClick} className="rounded-0 my-5" variant="dark ronde">Continuar Compra  <img src="/images/whatsapp.svg" alt="Logo Whatsapp" /></Button>
