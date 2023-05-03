@@ -33,7 +33,9 @@ const PreguntasFrecuentes = () => {
 					</Collapse>
 				</Col>
 				<Col xs={"2"} className="mt-5 d-flex justify-content-end">
-					<div className='cursor' onClick={() => setOpenOne(!openOne)} aria-controls="example-collapse-text" aria-expanded={openOne}><img className="img-fluid" src="/images/flecha.svg" alt="" /></div>
+					<div className='cursor' onClick={() => setOpenOne(!openOne)} aria-controls="example-collapse-text" aria-expanded={openOne}>
+						<img className="img-fluid" src={openOne ? "/images/flechaActivada.svg" : "/images/flechaInactiva.svg"} alt="" />
+					</div>
 				</Col>
 
 				<Col xs={"10"} className="mt-3">
@@ -71,7 +73,9 @@ const PreguntasFrecuentes = () => {
 					</Collapse>
 				</Col>
 				<Col xs={"2"} className="mt-3 d-flex justify-content-end">
-					<div className='cursor' onClick={() => setOpenTwo(!openTwo)} aria-controls="example-collapse-text" aria-expanded={openTwo}><img className="img-fluid" src="/images/flecha.svg" alt="" /></div>
+					<div className='cursor' onClick={() => setOpenTwo(!openTwo)} aria-controls="example-collapse-text" aria-expanded={openTwo}>
+						<img className="img-fluid" src={openTwo ? "/images/flechaActivada.svg" : "/images/flechaInactiva.svg"} alt="" />
+					</div>
 				</Col>
 
 				<Col xs={"10"} className="mt-3">
@@ -86,7 +90,9 @@ const PreguntasFrecuentes = () => {
 					</Collapse>
 				</Col>
 				<Col xs={"2"} className="mt-3 d-flex justify-content-end">
-					<div className='cursor' onClick={() => setOpenThree(!openThree)} aria-controls="example-collapse-text" aria-expanded={openThree}><img className="img-fluid" src="/images/flecha.svg" alt="" /></div>
+					<div className='cursor' onClick={() => setOpenThree(!openThree)} aria-controls="example-collapse-text" aria-expanded={openThree}>
+						<img className="img-fluid" src={openThree ? "/images/flechaActivada.svg" : "/images/flechaInactiva.svg"} alt="" />
+					</div>
 				</Col>
 
 				<Col xs={"10"} className="mt-3">
@@ -104,7 +110,9 @@ const PreguntasFrecuentes = () => {
 					</Collapse>
 					</Col>
 				<Col xs={"2"} className="mt-3 d-flex justify-content-end">
-					<div className='cursor' onClick={() => setOpenFour(!openFour)} aria-controls="example-collapse-text" aria-expanded={openFour}><img className="img-fluid" src="/images/flecha.svg" alt="" /></div>
+					<div className='cursor' onClick={() => setOpenFour(!openFour)} aria-controls="example-collapse-text" aria-expanded={openFour}>
+						<img className="img-fluid" src={openFour ? "/images/flechaActivada.svg" : "/images/flechaInactiva.svg"} alt="" />
+					</div>
 				</Col>
 
 				<Col xs={"10"} className="mt-3 mb-5">
@@ -123,7 +131,9 @@ const PreguntasFrecuentes = () => {
 					</Collapse>
 				</Col>
 				<Col xs={"2"} className="mt-3 d-flex justify-content-end">
-					<div className='cursor' onClick={() => setOpenFive(!openFive)} aria-controls="example-collapse-text" aria-expanded={openFive}><img className="img-fluid" src="/images/flecha.svg" alt="" /></div>
+					<div className='cursor' onClick={() => setOpenFive(!openFive)} aria-controls="example-collapse-text" aria-expanded={openFive}>
+						<img className="img-fluid" src={openFive ? "/images/flechaActivada.svg" : "/images/flechaInactiva.svg"} alt="" />
+					</div>
 				</Col>
 			</Row>
 		</Container>
