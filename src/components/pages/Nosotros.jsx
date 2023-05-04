@@ -5,8 +5,6 @@ const Nosotros = () => {
 	return (
 		<Container>
 			<Row>
-				
-				
 				<Col xs={"12"} md={"8"}>
 					<h1 className="text-start mt-5 mb-4 fw-bold">¡Quien soy!</h1>
 					<Col xs={"12"} md={"8"}>
@@ -26,8 +24,8 @@ const Nosotros = () => {
 					</Col>
 				</Col>
 				<Col xs={"12"} md={"4"} >
-					<div className="d-flex align-items-center h-100">
-						<img src="/images/imagenNosotros.jpg" alt="" className="img-fluid" />
+					<div className="d-flex align-items-center h-75 mt-4">
+						<img src="/images/imagenNosotros.jpg" alt="Foto Personal" className="img-fluid" />
 					</div>
 				</Col>
 			</Row>
