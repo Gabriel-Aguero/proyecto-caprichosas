@@ -6,7 +6,7 @@ import Buscador from '../Buscador';
 const NavBarComponents = () => {
 
 	return (
-		<Navbar variant="light" expand="lg" className="mx-md-5 mt-3">
+		<Navbar variant="light" expand="lg" className="mx-lg-3 mt-3">
 			<Container fluid>
 				<Navbar.Brand as={Link} to="/"><img className="img-fluid" src={"/images/logoPrincipal.svg"} alt="Logo Caprichosas" /></Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
