@@ -35,7 +35,7 @@ const Buscador = () => {
     }
     
     return (
-        <div>
+        <div className="contenedor-busqueda">
             <div id="barraBuscar">
                 <img className="lupaBuscar" src="/images/lupa.svg" alt="Lupa" />
                 <input type="text" placeholder="Descubrí tu estilo" className="form-control fuente" value={search} onChange={searcher}  />

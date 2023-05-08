@@ -38,15 +38,16 @@ h1, h2, h3, p,
     border-bottom: 1px solid black !important;
     border-radius: 0px !important;
 }
-#barraBuscar .buscador-input {
+.contenedor-busqueda {
     position: relative;
-    width: 100%;
+}
+#barraBuscar .buscador-input {
     display: inline-block;
 }
 #barraBuscar .lupaBuscar {
     position: absolute;
     top: 50%;
-    right: 11px;
+    right: 0;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
@@ -56,6 +57,7 @@ h1, h2, h3, p,
     z-index: 3;
     background-color: rgba(255, 255, 255, 0.87);
     width: 100% !important;
+    left: 0;
 }
 .resultadosBusqueda {
     color: #000;
@@ -158,9 +160,3 @@ h1, h2, h3, p,
     background-color: transparent !important;
 }
 
-@media only screen and (max-width: 991px) {
-    #barraBuscar .lupaBuscar {
-        position: absolute;
-        top: 92% !important;
-    }
-}
