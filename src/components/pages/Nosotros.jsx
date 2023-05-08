@@ -24,7 +24,7 @@ const Nosotros = () => {
 					</Col>
 				</Col>
 				<Col xs={"12"} md={"4"} >
-					<div className="d-flex align-items-center h-75 pt-5 pt-md-0 mt-md-4">
+					<div className="d-flex align-items-center mt-md-5 pt-md-5">
 						<img src="/images/imagenNosotros.jpg" alt="Foto Personal" className="img-fluid" />
 					</div>
 				</Col>
